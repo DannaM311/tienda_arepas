@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca Municipal</title>
+  <meta name="description" content="Catálogo en línea de la Biblioteca Municipal: busca, filtra y reserva libros.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,700;1,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="cabecera">
+    <h1>Biblioteca Municipal</h1>
+    <p>Busca en el catálogo y reserva tu próxima lectura.</p>
+  </header>
+
+  <main>
+    <section class="controles" aria-label="Filtros del catálogo">
+      <label class="campo">
+        <span>Buscar por título o autor</span>
+        <input type="search" id="buscador" placeholder="Ej. García Márquez">
+      </label>
+      <label class="campo">
+        <span>Género</span>
+        <select id="genero"></select>
+      </label>
+      <label class="check">
+        <input type="checkbox" id="soloDisponibles">
+        Solo disponibles
+      </label>
+    </section>
+
+    <p id="contador" class="contador" aria-live="polite"></p>
+    <section id="catalogo" class="catalogo" aria-label="Libros"></section>
+  </main>
+
+  <footer class="pie">
+    <p>Horario: lunes a sábado, 8:00 a. m. – 6:00 p. m.</p>
+  </footer>
+
+  <script src="js/books.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
